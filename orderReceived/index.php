@@ -3,7 +3,7 @@ session_start();
 if($_GET['ordernumber'] == ""){
     echo"<script> location.href='../checkout/'  </script>";
 }
-
+//get customers out by order number to print out the ordered film purchase
   include "../includes/db.php";
 if(isset($_GET['ordernumber'])){
     $ordernumber=$_GET['ordernumber'];
