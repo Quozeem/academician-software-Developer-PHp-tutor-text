@@ -3,7 +3,7 @@
 session_start();
 //include "../../includes/functions.php";
 include "../../includes/db.php";
-
+//create account toggle checkbox query
 $showlogin= $_GET['showlogin'];
 $query =$con->query("SELECT * FROM togglelogin WHERE showlogin ='$showlogin'");
 $rowCount=$query->num_rows;
