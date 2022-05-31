@@ -1,7 +1,8 @@
   <?php 
 session_start(); 
+//authenticate Admin login
 if(($_SESSION['logdir'])!="true"){
-    header("location:../index.php");
+    header("location:../");
 }
 else{
    
@@ -74,6 +75,7 @@ else{
                   </thead>
                   <tbody>
                     <?php
+  //select all films query
                        $x=1;
                        include('include/access/connector.php');
                       $result = $phdb->query("SELECT * FROM `joinall`");
@@ -101,7 +103,7 @@ else{
 
                     
                                     <td><i data-toggle="modal" data-target="#modal-edits<?php echo $row['id'];?>" class="fa fa-edit" style="color: green;cursor: pointer;" title="Edit" ></i> </td>
-                                     <?php include 'modal/editceo_product.php';?>
+                                     <?php include 'modal/edit_product.php';?>
                                      
  <td><i data-toggle="modal" data-target="#modal-upload<?php echo $row['id'];?>" class="fa fa-edit" style="color: orange;cursor: pointer;" title="Edit" ></i> </td>
                                      <?php include 'modal/uploadnext_modal.php';?>
