@@ -531,12 +531,10 @@ paymentForm.addEventListener("submit", payWithPaystack, false);
 function payWithPaystack(e) {
   e.preventDefault();
   let handler = PaystackPop.setup({
-    key: 'pk_test_357e8fe5fdd410da1e46285bd987238e2b8d1429', // Replace with your public key
-    email: "ade@gmail.com",
-   amount: 100 * 100,
-  // lastname: document.getElementById("last_name").value,
-   // amount: 1500 * 100,
-     firstname: document.getElementById("first-name").value,
+    key: 'pk_test_353e8fe5fdd410da1e46285bd987288e2b8d1429', // Replace with your public key
+    email: document.getElementById("email").value,
+   amount: document.getElementById("total").value,
+     firstname: document.getElementById("name").value,
     ref: ''+Math.floor((Math.random() * 1000000000) + 1), // generates a pseudo-unique reference. Please replace with a reference you generated. Or remove the line entirely so our API will generate one for you
     // label: "Optional string that replaces customer email"
     onClose: function(){
