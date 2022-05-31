@@ -1,11 +1,12 @@
 <?php
+//login query
 $erromessage="";
  if (isset($_POST['LOGIN']))  {
 $email= $_POST['email'];
    $word=md5($_POST['password']);
-    $status = "Active now";
+ 
      date_default_timezone_set('Africa/Lagos');
-     $date_time=date('m/d/Y h:i:s a',time());
+   
    include("../includes/db.php");
     
     
@@ -27,6 +28,7 @@ $email= $_POST['email'];
 	
    
    else{
+	   //validate wrong input details
     
                  $erromessage="Invalid Email or Password"; 
                  } }
