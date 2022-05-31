@@ -2,6 +2,7 @@
 <?php include("../includes/db.php"); ?>  
 <body>
 <?php 
+ //calculate shipping fee
 $country=$_POST['country'];
 
 if(isset($_POST['countryddd'])){
