@@ -1,6 +1,7 @@
 <?php
 session_start();
 //include "../../includes/functions.php";
+//Payment on delivery toggle button query
 include "../../includes/db.php";
 $codpayment= $_GET['codpayment'];
 $query =$con->query("SELECT * FROM togglelogin WHERE paymentshow ='$codpayment'");
