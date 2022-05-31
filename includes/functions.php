@@ -4,7 +4,7 @@ class connection{
  private $host="localhost";
 private $username="root";
 private $pass="";
-private $db ="bikini_store";
+private $db ="film_production";
 
   function __construct(){
     $con = mysqli_connect($this->host,$this->username,$this->pass,$this->db)
