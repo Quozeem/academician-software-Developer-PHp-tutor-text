@@ -1,6 +1,7 @@
 
 <?php
 session_start();
+//toggle zones with respect to country picked
 include "../../includes/functions.php";
 include "../../includes/db.php";
 $country= $_GET['country'];
